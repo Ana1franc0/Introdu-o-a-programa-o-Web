@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pesquisa</title>
+    </head>
+    <body>
+        <h1>Pesquisa de satisfação</h1>
+        <form action="processar_pesquisa.html" method="POST">
+            <section>
+            <h2>Dados pessoais:</h2>
+            <p>
+                <lable for="name">Nome</lable>
+                <input type="text" placeholder="Seu nome" id="name"> 
+            </p>
+            <p>
+                <lable for="login">E-mail</lable>
+                <input type="email" placeholder="Seu e-mail" id="login"> 
+            </p>
+            <p>
+                <lable for="number">Senha</lable>
+                <input type="number" placeholder="Seu número" id="number">
+            </p>
+            </section>
+            <section>
+            <h2>Dados de pesquisa:</h2>
+            <p>
+                Nossa equipe de suporte fez você se sentir valorizado?
+                <p> 
+                    <input type="radio" id="sim" name="equipe de suporte">
+                    <label for="sim">Sim</label>
+                </p>
+            </p>
+            <p>
+                <input type="radio" id="Não" name="equipe de suporte">
+                <label for="Não">Não</label>
+            </p>
+            <p>
+                Numa escala de 1 a 5, indique o nível do atendimento prestado:
+                <p>
+                    <input type="radio" id="1" name="nivel atendimento">
+                    <lable for="1">1</lable>
+
+                    <input type="radio" id="2" name="nivel atendimento">
+                    <lable for="2">2</lable>
+
+                    <input type="radio" id="3" name="nivel atendimento">
+                    <lable for="3">3</lable>
+
+                    <input type="radio" id="4" name="nivel atendimento">
+                    <lable for="4">4</lable>
+
+                    <input type="radio" id="5" name="nivel atendimento">
+                    <lable for="5">5</lable>
+                </p>
+            </p>    
+                <p>
+                    Numa escala de 1 a 5, indique o nível de satisfação em relação a resolução do problema
+                    <p>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </p>
+                </p>
+                <P>
+                    <Input type="checkbox" id="autozação">
+                    <lable for="autorização">Autorizo compartilhamento da minha resposta com terceiros.</lable>
+                </P>
+                <input type="submit" value="Enviar">
+            </section>
+            </p>
+        </form>
+    </body>
+</html>
