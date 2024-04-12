@@ -1,0 +1,19 @@
+/* Color Theme Swatches in Hex */
+.Teal-and-Blush-1-hex { color: #23606E; }
+.Teal-and-Blush-2-hex { color: #FACFCE; }
+.Teal-and-Blush-3-hex { color: #008F8C; }
+.Teal-and-Blush-4-hex { color: #015958; }
+.Teal-and-Blush-5-hex { color: #023535; }
+/* Color Theme Swatches in Hex */
+/*
+.Plum-Rush-1-hex { color: #105057; }
+.Plum-Rush-2-hex { color: #898C8B; }
+.destaque { color: #FF81D0; }
+.cor { color: #FACFCE; }
+.fundo { color: #23606E; }
+*/
+
+html {
+    background : #FACFCE;
+    color :#23606E;
+}
