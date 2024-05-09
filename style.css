@@ -1,0 +1,41 @@
+/* Exercícios pseudo classes
+1. Customize a aparência dos links da seguinte forma: 
+
+- Por padrão, devem ter a cor de destaque e estarem em negrito.
+
+- Se sobrepostos, devem ter sua cor alterada para uma tonalidade mais clara/escura. Os links visitados não devem ficar mais em negrito.*/
+
+a {
+    color: #FF81D0;
+}
+a:hover {
+    color:  #e691c7ee;
+}
+
+/* 2. Vamos dar um destaque a primeira letra do primeiro parágrafo da seção principal. Você deverá customizá-lo para que:
+
+- Tenha tamanho de fonte 3 vezes maior que o padrão.
+
+- Seja de uma fonte diferente da escolhida para o  site.
+
+- Fique flutuando a esquerda.
+
+OBS: você precisará aplicar mais de um pseudo seletor para realizar essa estilização. Fique atento! */
+
+.main p:first-of-type::first-letter {
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    float:left;
+}
+
+/* 3. Utilize bordas para criar um separador entre os itens presentes no menu de design. Aplique uma borda superior 
+no topo de todos os itens de menu. Aplique uma borda inferior apenas no último item da lista */
+
+.design-selection li {
+    border-top: #23606E solid 1px;
+    padding-top: 5px;
+}
+.design-selection li:last-of-type {
+    border-bottom: #23606E solid 1px;
+    padding-bottom: 5px;
+}
