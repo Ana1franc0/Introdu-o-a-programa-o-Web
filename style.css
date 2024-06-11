@@ -1,41 +1,49 @@
-/* Exercícios pseudo classes
-1. Customize a aparência dos links da seguinte forma: 
-
-- Por padrão, devem ter a cor de destaque e estarem em negrito.
-
-- Se sobrepostos, devem ter sua cor alterada para uma tonalidade mais clara/escura. Os links visitados não devem ficar mais em negrito.*/
-
-a {
-    color: #FF81D0;
-}
-a:hover {
-    color:  #e691c7ee;
-}
-
-/* 2. Vamos dar um destaque a primeira letra do primeiro parágrafo da seção principal. Você deverá customizá-lo para que:
-
-- Tenha tamanho de fonte 3 vezes maior que o padrão.
-
-- Seja de uma fonte diferente da escolhida para o  site.
-
-- Fique flutuando a esquerda.
-
-OBS: você precisará aplicar mais de um pseudo seletor para realizar essa estilização. Fique atento! */
-
-.main p:first-of-type::first-letter {
-    font-size: 3em;
-    font-family: 'Times New Roman', Times, serif;
-    float:left;
+/* 1. Crie uma media query para telas inferiores a 768 pixels; nós a utilizaremos como layout mobile. */
+/* 2. Realize as seguintes mudanças para o layout mobile:
+- Remova o reposicionamento do menu de design para que ele se encaixe no mesmo lugar de antes.
+- Remova a borda lateral ao lado da div
+- Mude a orientação do Flexbox presente no elemento para vertical, e organize os elementos de forma empilhada
+- Remova a altura fixa presente no cabeçalho da página
+- Remova também o espaçamento inicial dado a cada um dos parágrafos */
+@media screen and (max-width: 768px) {
+    .design-selection {
+        position: static;
+        width: 100%;
+    }
+    .explanation {
+        border-right: none;
+        width: 100%;
+    }
+    #zen-intro {
+        height: auto;
+    }
+    .participation {
+        flex-direction: column;
+    }
+    p {
+        text-indent: 0;
+    }
 }
 
-/* 3. Utilize bordas para criar um separador entre os itens presentes no menu de design. Aplique uma borda superior 
-no topo de todos os itens de menu. Aplique uma borda inferior apenas no último item da lista */
+/* Vamos Deixar nossa página mais adequada a mídia de impressão também!
+1. Crie uma media query para meios impressos, mas sem qualquer tipo de restrição relacionada a tela */
 
-.design-selection li {
-    border-top: #23606E solid 1px;
-    padding-top: 5px;
-}
-.design-selection li:last-of-type {
-    border-bottom: #23606E solid 1px;
-    padding-bottom: 5px;
+/* 2. Adicione as seguintes modificações a essa media query: 
+- Altere o estilo da fonte para uma serifada, como times .
+- Inverta as cores do banner para que o fundo fique claro (assim como o restante da página) */
+@media print {
+    html {
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #zen-intro header {
+        background-color:antiquewhite;
+        color: #1f295c;
+    }
+    .design-selection {
+        position: static;
+        width: 100%;
+    }
+    .explanation {
+        border-right: none;
+        width: 100%; }
 }
